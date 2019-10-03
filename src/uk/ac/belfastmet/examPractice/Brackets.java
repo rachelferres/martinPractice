@@ -3,7 +3,7 @@
  */
 package uk.ac.belfastmet.examPractice;
 
-import java.util.Stack;
+
 
 /**
  * @author fer19171898 [()]
@@ -16,8 +16,9 @@ public class Brackets {
 		char[] inputCharArray = input.toCharArray();
 
 		for (int index1 = 0; index1 < inputCharArray.length; index1++) {
-			if(inputCharArray.length%2!=0)
+			if(inputCharArray.length%2!=0) {
 				break;
+			}
 			for (int index2 = 0; index2 < inputCharArray.length; index2++) {
 				if (inputCharArray[index1] == '(' && inputCharArray[index2] == ')') {
 					result = "Balanced";
@@ -48,29 +49,29 @@ public class Brackets {
 		int openSquare = 0;
 		int closeSquare =0;
 		int indexOfOpen=inputCharArray.length;
-		int indexOfClose=inputCharArray.length;
+		int indexOfClosed=inputCharArray.length;
 		
 		for (int i = 0; i < inputCharArray.length; i++) {
 			
 			if(inputCharArray[i]==')') {
-				indexOfClose=i;
+				indexOfClosed=i;
 			}
 			if(inputCharArray[i]=='(') {
 				indexOfOpen=i;
 			}
 			if(inputCharArray[i]=='}') {
-				indexOfClose=i;
+				indexOfClosed=i;
 			}
 			if(inputCharArray[i]=='{') {
 				indexOfOpen=i;
 			}
 			if(inputCharArray[i]==']') {
-				indexOfClose=i;
+				indexOfClosed=i;
 			}
 			if(inputCharArray[i]=='[') {
 				indexOfOpen=i;
 			}
-			if(indexOfClose<indexOfOpen) {
+			if(indexOfClosed<indexOfOpen) {
 				result = "Not Balanced";
 				return result;
 			}

@@ -16,7 +16,7 @@ public class Revision {
 	 */
 	public static void main(String[] args) {
 		Revision revision = new Revision();
-		System.out.println(revision.isPalindrome("hannah"));
+		System.out.println(revision.isPalindrome("raaecar"));
 	}
 	/**
 	 * 
@@ -41,8 +41,9 @@ public class Revision {
 	 * @return
 	 */
 	public boolean isPalindrome(String str) {
+		System.out.println(str.length()/2);
 		boolean isPalindrome=true;
-		for (int i = 0; i < str.length()/2-1; i++) {
+		for (int i = 0; i < str.length()/2; i++) {
 			if(str.charAt(i)!=str.charAt(str.length()-i-1)) {
 				isPalindrome=false;
 				break;

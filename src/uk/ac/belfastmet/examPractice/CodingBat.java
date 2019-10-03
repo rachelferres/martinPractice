@@ -23,7 +23,7 @@ public class CodingBat {
 		//for (int index = 0; index < newnums.length; index++) {
 		//	System.out.println(newnums[index]);
 		//}
-		fizzBuzz(1, 15);
+		fizzBuzz(0, 15);
 	}
 //	Return a version of the given array where each zero value in the array is replaced by the largest odd value to the right of the zero in the array. 
 //	If there is no odd value to the right of the zero, leave the zero as a zero.
@@ -255,5 +255,28 @@ public class CodingBat {
 
 		return fizzOrBuzz;
 	}
+	
+	public boolean haveThree(int[] nums) {
+		  boolean result = false;
+		  int countThrees=0;
+		  for(int index = 0; index < nums.length; index++){
+		    if(nums[index]==3){
+		       countThrees++;
+		     }
+		  }
+		  if(countThrees == 3){
+		    for(int index = 0; index < nums.length-1; index++){
+		      if(nums[index]==3 && nums[index+1]==3){
+		        result = false;
+		        break;
+		    }else{
+		      result = true;
+		    }
+		    
+		    }
+		    }
+		  
+		  return result;
+		}
 
 }
